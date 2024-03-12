@@ -14,8 +14,10 @@ export class AppComponent {
     invitationUrl = '';
     connectionStatus = '';
     proofRecordId = '';
-    presentationState = {};
+    presentationState = '';
     presentationResponse = {};
+
+    diplomaData: any = {};
 
     constructor(private http: HttpClient) {}
 
@@ -72,7 +74,7 @@ export class AppComponent {
     sendPresentationRequest() {
         let obj = {
             comment: 'comments',
-            connectionId: '3b9d7c3b-c79d-4440-a0f1-d9474e9ebe33',
+            connectionId: this.connectionId,
             attributes: [
                 {
                     attributeName: 'user_id',
@@ -86,10 +88,17 @@ export class AppComponent {
                     credentialDefId:
                         'dxmeeRVwfAQecNy1AXuws:3:CL:319876:MoodleCredTest',
                 },
+                {
+                    attributeName: 'grade',
+                    schemaId: 'dxmeeRVwfAQecNy1AXuws:2:MoodleCred:1.0.0',
+                    credentialDefId:
+                        'dxmeeRVwfAQecNy1AXuws:3:CL:319876:MoodleCredTest',
+                },
             ],
         };
 
         console.log(obj);
+        console.log(environment.presentationRequestApi);
 
         this.http
             .post<any>(environment.presentationRequestApi, obj)
@@ -110,6 +119,7 @@ export class AppComponent {
 
     pollForPresentation() {
         const url = `${environment.presentationsApi}?proofRecordId=${this.proofRecordId}`;
+        console.log(url);
 
         const poll$ = interval(500);
         poll$
@@ -122,6 +132,9 @@ export class AppComponent {
                     }
 
                     this.presentationResponse = response;
+
+                    this.diplomaData =
+                        response.data.presentations[0].credentialSubject;
                 });
             });
     }

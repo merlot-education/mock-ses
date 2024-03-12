@@ -1,0 +1,108 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+}
+
+div {
+    margin: 20px 0;
+}
+
+.qr-code {
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px var(--shadow-color);
+    padding: 20px;
+    background-color: white;
+}
+
+.diploma-container {
+    padding: 10%;
+}
+
+.diploma {
+    border: 2px solid black;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: rgb(236, 210, 169);
+    transform: rotate(0deg);
+    position: relative;
+}
+
+p {
+    max-width: 400px;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.wax-seal {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+
+    img {
+        width: 100px;
+    }
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+h1.banner {
+    position: relative;
+    margin: 0 auto 20px;
+    padding: 10px 40px;
+    text-align: center;
+    color: white;
+    background-color: #b50909;
+}
+
+h1.banner::before,
+h1.banner::after {
+    content: "";
+    width: 80px;
+    height: 100%;
+    background-color: #a20000;
+
+    /* position ribbon ends behind and slightly lower */
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+
+    /* clip ribbon end shape */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
+
+    /* draw and position the folded ribbon bit */
+    background-image: linear-gradient(45deg, transparent 50%, #5d3922 50%);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+h1.banner::before {
+    left: -60px;
+}
+
+h1.banner::after {
+    right: -60px;
+    transform: scaleX(-1); /* flip horizontally */
+}
