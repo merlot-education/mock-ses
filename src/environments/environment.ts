@@ -1,11 +1,13 @@
 export const environment = {
     production: false,
-    invitationUrlApi: 'https://secure-routes.jumpy.dev/invitation-url.php',
-    connectionApi: 'https://secure-routes.jumpy.dev/connections.php',
+    invitationUrlApi:
+        'https://ocm.dev.merlot-education.eu/connection/v1/invitation-url?alias=trust',
+    connectionApi:
+        'https://ocm.dev.merlot-education.eu/connection/v1/connections',
     presentationRequestApi:
-        'https://secure-routes.jumpy.dev/send-presentation-request.php',
+        'https://ocm.dev.merlot-education.eu/proof/v1/send-presentation-request',
     presentationsApi:
-        'http://secure-routes.jumpy.dev/find-by-presentation-id.php',
+        'https://ocm.dev.merlot-education.eu/proof/v1/find-by-presentation-id',
     credentialDefinitionId: 'dxmeeRVwfAQecNy1AXuws:3:CL:319876:MoodleCredTest',
     schemaId: 'dxmeeRVwfAQecNy1AXuws:2:MoodleCred:1.0.0',
 };
