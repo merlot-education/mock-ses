@@ -79,20 +79,14 @@ export class AppComponent {
                 {
                     attributeName: 'user_id',
                     schemaId: 'dxmeeRVwfAQecNy1AXuws:2:MoodleCred:1.0.0',
-                    credentialDefId:
-                        'dxmeeRVwfAQecNy1AXuws:3:CL:319876:MoodleCredTest',
                 },
                 {
                     attributeName: 'course_name',
                     schemaId: 'dxmeeRVwfAQecNy1AXuws:2:MoodleCred:1.0.0',
-                    credentialDefId:
-                        'dxmeeRVwfAQecNy1AXuws:3:CL:319876:MoodleCredTest',
                 },
                 {
                     attributeName: 'grade',
                     schemaId: 'dxmeeRVwfAQecNy1AXuws:2:MoodleCred:1.0.0',
-                    credentialDefId:
-                        'dxmeeRVwfAQecNy1AXuws:3:CL:319876:MoodleCredTest',
                 },
             ],
         };
