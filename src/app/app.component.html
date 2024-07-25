@@ -19,14 +19,7 @@
         <qrcode [qrdata]="invitationUrl" [width]="512" [errorCorrectionLevel]="'M'"></qrcode>
     </div>
     <h1 *ngIf="presentationState != 'done' && presentationState != ''">{{presentationState}}</h1>
-    <!-- <pre>
-        {{presentationResponse | json}}
-    </pre> -->
 </div>
-
-<!-- <pre>
-    {{diplomaData | json}}
-</pre> -->
 
 <div class="diploma-container" *ngIf="presentationState == 'done'">
     <div class="diploma">
