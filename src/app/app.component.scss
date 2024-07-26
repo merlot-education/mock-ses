@@ -122,3 +122,12 @@ h1.banner::after {
     right: -60px;
     transform: scaleX(-1); /* flip horizontally */
 }
+
+.qrcodeImage {
+    display: flex;
+    flex: 1;
+}
+  
+.demoBorder {
+border: 10px;
+}

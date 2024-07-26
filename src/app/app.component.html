@@ -16,7 +16,16 @@
 
 <div style="text-align: center;">
     <div class="qr-code" *ngIf="presentationState == ''">
-        <qrcode [qrdata]="invitationUrl" [width]="512" [errorCorrectionLevel]="'M'"></qrcode>
+        <qrcode 
+            [cssClass]="'demoBorder'"
+            [margin]="4"
+            [imageSrc]="'./assets/merlot-pcm-opaque.png'"
+            [imageHeight]="150"
+            [imageWidth]="150"
+            [qrdata]="invitationUrl" 
+            [width]="512" 
+            [errorCorrectionLevel]="'M'">
+        </qrcode>
     </div>
     <h1 *ngIf="presentationState != 'done' && presentationState != ''">{{presentationState}}</h1>
 </div>
